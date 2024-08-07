@@ -25,13 +25,13 @@ const nodes = [
   {
     id: '3',
     type: 'customNode',
-    data: { label: '調整', count: 3 },
+    data: { label: '(再)分散', count: 3 },
     position: { x: 200, y: 200 },
   },
   {
     id: '4',
     type: 'customNode',
-    data: { label: '(再)分散', count: 4 },
+    data: { label: '調整', count: 4 },
     position: { x: 200, y: 300 },
   },
   {
@@ -55,6 +55,7 @@ const edges = [
       width: 8,
     },
     sourceHandle: 'bottom',
+    targetHandle: 'left',
     style: { stroke: '#64748b', strokeWidth: 3 },
   },
   {
@@ -69,6 +70,7 @@ const edges = [
       width: 8,
     },
     sourceHandle: 'bottom',
+    targetHandle: 'left',
     style: { stroke: '#64748b', strokeWidth: 3 },
   },
   {
@@ -83,11 +85,12 @@ const edges = [
       width: 8,
     },
     sourceHandle: 'bottom',
+    targetHandle: 'left',
     style: { stroke: '#64748b', strokeWidth: 3 },
   },
   {
-    id: 'e3-5',
-    source: '3',
+    id: 'e4-5',
+    source: '$4',
     target: '5',
     type: 'smoothstep',
     markerEnd: {
@@ -97,6 +100,22 @@ const edges = [
       width: 8,
     },
     sourceHandle: 'bottom',
+    targetHandle: 'left',
+    style: { stroke: '#64748b', strokeWidth: 3 },
+  },
+  {
+    id: 'e1-3',
+    source: '1',
+    target: '5',
+    type: 'smoothstep',
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      color: '#64748b',
+      height: 8,
+      width: 8,
+    },
+    sourceHandle: 'bottom',
+    targetHandle: 'left',
     style: { stroke: '#64748b', strokeWidth: 3 },
   },
 ];
