@@ -13,31 +13,62 @@ const nodes = [
   {
     id: '1',
     type: 'customNode',
-    data: { label: '重合', count: 1 },
+    data: {
+      label: '重合',
+      count: 1,
+      evaluations: [{ label: '評価1' }],
+    },
     position: { x: 0, y: 0 },
   },
   {
     id: '2',
     type: 'customNode',
-    data: { label: '脱臭濃縮', count: 2 },
+    data: {
+      label: '脱臭濃縮',
+      count: 2,
+      evaluations: [{ label: '評価1' }, { label: '評価2' }],
+    },
     position: { x: 100, y: 100 },
   },
   {
     id: '3',
     type: 'customNode',
-    data: { label: '(再)分散', count: 3 },
+    data: {
+      label: '(再)分散',
+      count: 3,
+      evaluations: [{ label: '評価1' }, { label: '評価2' }, { label: '評価3' }],
+    },
     position: { x: 200, y: 200 },
   },
   {
     id: '4',
     type: 'customNode',
-    data: { label: '調整', count: 4 },
+    data: {
+      label: '調整',
+      count: 4,
+      evaluations: [
+        { label: '評価1' },
+        { label: '評価2' },
+        { label: '評価3' },
+        { label: '評価4' },
+      ],
+    },
     position: { x: 200, y: 300 },
   },
   {
     id: '5',
     type: 'customNode',
-    data: { label: '凝固', count: 5 },
+    data: {
+      label: '凝固',
+      count: 5,
+      evaluations: [
+        { label: '評価1' },
+        { label: '評価2' },
+        { label: '評価3' },
+        { label: '評価4' },
+        { label: '評価5' },
+      ],
+    },
     position: { x: 400, y: 400 },
   },
 ];
@@ -90,7 +121,7 @@ const edges = [
   },
   {
     id: 'e4-5',
-    source: '$4',
+    source: '4',
     target: '5',
     type: 'smoothstep',
     markerEnd: {
