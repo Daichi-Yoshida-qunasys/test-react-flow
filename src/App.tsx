@@ -8,6 +8,7 @@ import {
 import '@xyflow/react/dist/style.css';
 import './App.css';
 import { CustomNode } from './components/CustomNode';
+import { Select, Option } from './components/MultipleSelect';
 
 const nodes = [
   {
@@ -172,6 +173,12 @@ function App() {
           <Controls />
         </ReactFlow>
       </div>
+      <Select>
+        <Option label="Apple" />
+        <Option label="Blueberry" />
+        <Option label="Watermelon" />
+        <Option label="Banana" />
+      </Select>
     </>
   );
 }
